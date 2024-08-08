@@ -1,5 +1,7 @@
 import React from "react";
+import "../styles/UserModal.scss";
 
+// Компонент модального окна для отображения детальной информации о пользователе
 const UserModal = ({ user, closeModal }) => {
   return (
     <div className="modal-overlay" onClick={closeModal}>
@@ -9,7 +11,6 @@ const UserModal = ({ user, closeModal }) => {
         </button>
         <h2>{`${user.firstName} ${user.lastName}`}</h2>
         <p>Возраст: {user.age}</p>
-        <p>Пол: {user.gender}</p>
         <p>Номер телефона: {user.phone}</p>
         <p>Email: {user.email}</p>
         <p>Адрес: {`${user.address.city}, ${user.address.address}`}</p>

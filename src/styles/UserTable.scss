@@ -1,0 +1,63 @@
+.user-table-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    overflow-x: auto;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    thead {
+      background-color: #f2f2f2;
+  
+      th {
+        padding: 12px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 14px;
+        border-bottom: 2px solid #ddd;
+        cursor: pointer; /* Указывает, что заголовок можно кликнуть */
+
+        &.asc::after {
+          content: " ▲";
+        }
+        &.desc::after {
+          content: " ▼";
+        }
+  
+        &:hover {
+          background-color: #e9e9e9;
+        }
+      }
+
+      th.no-sort {
+        cursor: default; /* Для некликабельных заголовков */
+      }
+    }
+  
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+  
+        &:hover {
+          background-color: #f1f1f1;
+        }
+      }
+  
+      td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 150px;
+      }
+    }
+  }
+  

@@ -1,8 +1,10 @@
 import React from "react";
+import "../styles/UserTableSearch.scss";
 
 const UserTableSearch = ({ searchQuery, setSearchQuery }) => {
+  // Обрабатывает изменение текста в поле ввода
   const handleInputChange = (event) => {
-    setSearchQuery(event.target.value);
+    setSearchQuery(event.target.value); // Обновляет состояние поискового запроса
   };
 
   return (
@@ -10,8 +12,8 @@ const UserTableSearch = ({ searchQuery, setSearchQuery }) => {
       <input
         type="text"
         placeholder="Поиск..."
-        value={searchQuery}
-        onChange={handleInputChange}
+        value={searchQuery} // Значение поля ввода
+        onChange={handleInputChange} // Событие изменения текста
         className="search-input"
       />
     </div>
